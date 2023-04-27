@@ -1,37 +1,116 @@
-.test {
-    text-align: center;
-    &_box {
-        margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1620px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.header{
+    background-image: url('../img/background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    &__inner{
+        padding-top: 55px;
+        display: flex;
+        justify-content: space-between;
     }
 }
-
-.main {
-    color: white;
-}
-
-.motya {
-    color: green;
-    font-size: 150px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    text-shadow: 10px 5px 10px black;
-    text-decoration: underline;
-    text-decoration-color: orangered;
-    animation: anim 1s infinite;
-}
-
-@keyframes anim {
-    from {
-        color: purple;
-        transform: rotate(0deg);
+.menu__list{
+    display: flex;
+    list-style: none;
+    
+    &-items{
+        display: flex;
+        gap: 25px;
     }
-    50% {
-        color: black;
-        transform: scaleX(2);
+    &-icons{
+        display: flex;
+        gap: 15px;
+    }
+    &-icon path, ellipse{
+        transition: fill .25s ease;
+    }
+    &-icon:hover path{
+        fill: white;
+    }
+    &-icon:hover ellipse{
+        fill: #8754D9;
+    }
+    &-link{
+        color: white;
         text-decoration: none;
+        font-family: 'Jost';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 124%;
+        transition: color .125s ease;
+        &:hover {
+            color: #D6CEE1;
+        }
     }
-    to {
-        color: purple;
-        transform: rotate(30deg);
+}
+.header__content{
+    display: flex;
+    padding-top: 66px;
+    justify-content: space-between;
+    &-main{
+        padding-top: 115px;  
+    }
+}
+.header__text{
+    &-main{
+        color: white;
+        max-width: 550px;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 124%;
+    }
+    &-help{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 124%;
+        max-width: 560px;
+        color: #FFFFFF;
+        padding-top: 14px;
+    }
+
+}
+.header__buttons{
+    display: flex;
+    gap: 20px;
+    padding-top: 44px;
+
+}
+.download_button{
+    padding: 15px 25px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 124%;
+    width: 220px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: background-color .25s ease;
+    &:hover{
+        color: #8754D9;
+        background-color: white;
     }
 }
